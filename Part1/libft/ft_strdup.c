@@ -39,11 +39,9 @@ static void	ft_strcpy(char *dst, const char *src)
 
 char	*strdup(const char *s1)
 {
-	int		len;
+	size_t	len;
 	char	*cpy;
 
-	if (s1 == NULL)
-		return (NULL);
 	len = ft_strlen(s1);
 	cpy = (char *)malloc(sizeof(char) * (len + 1));
 	if (cpy == NULL)

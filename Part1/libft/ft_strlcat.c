@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	ft_strlen(char *s)
+static size_t	ft_strlen(const char *s)
 {
 	int	i;
 

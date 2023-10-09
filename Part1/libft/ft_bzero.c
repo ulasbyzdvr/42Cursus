@@ -23,5 +23,4 @@ void	ft_bzero(void *s, size_t n)
 		b++;
 		n--;
 	}
-	return (0);
 }
