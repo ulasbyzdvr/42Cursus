@@ -55,11 +55,11 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	del /q $(NAME)
-	del /q $(OFILES)
+	rm -f $(NAME)
+	rm -f $(OFILES)
 
 fclean: clean
-	del /q $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
