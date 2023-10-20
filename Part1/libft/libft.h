@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeyazda  <ubeyazda@student.42.fr   >      +#+  +:+       +#+        */
+/*   By: ubeyazda <ubeyazda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:23:09 by ubeyazda          #+#    #+#             */
-/*   Updated: 2023/10/14 20:00:59 by ubeyazda         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:20:40 by ubeyazda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif

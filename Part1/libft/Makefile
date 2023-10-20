@@ -1,5 +1,3 @@
-Library		= libft
-
 files 	   = ft_atoi \
 			 ft_bzero \
 			 ft_calloc \
@@ -39,13 +37,13 @@ Compiler	= gcc
 
 CmpFlags	= -Wall -Wextra -Werror
 
-OUTN	= $(Library).a
+OUTN	= libft.a
 
 CFILES	= $(files:%=%.c)
 
 OFILES	= $(files:%=%.o)
 
-NAME	= $(OUTN)
+NAME	= libft.a
 
 $(NAME):
 	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
