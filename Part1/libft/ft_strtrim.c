@@ -6,7 +6,7 @@
 /*   By: ubeyazda <ubeyazda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:23:09 by ubeyazda          #+#    #+#             */
-/*   Updated: 2023/10/20 14:18:57 by ubeyazda         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:35:47 by ubeyazda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	str = 0;
-	if (!s1 && !set)
+	if (!s1)
 		return (NULL);
-	else if (set == NULL)
+	else if (!set)
 		return ((char *)s1);
 	i = 0;
 	j = ft_strlen(s1);
+	if (i == j)
+		return (ft_strdup(""));
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeyazda  <ubeyazda@student.42.fr   >      +#+  +:+       +#+        */
+/*   By: ubeyazda <ubeyazda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:23:09 by ubeyazda          #+#    #+#             */
-/*   Updated: 2023/10/14 20:00:59 by ubeyazda         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:43:43 by ubeyazda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 static int	count_words(const char *str, char c)
 {
 	int	i;
-	int	trigger;
+	int	check;
 
 	i = 0;
-	trigger = 0;
+	check = 0;
 	while (*str)
 	{
-		if (*str != c && trigger == 0)
+		if (*str != c && check == 0)
 		{
-			trigger = 1;
+			check = 1;
 			i++;
 		}
 		else if (*str == c)
-			trigger = 0;
+			check = 0;
 		str++;
 	}
 	return (i);
@@ -53,9 +53,9 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s)
+	split = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!split)
 		return (NULL);
-	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	i = 0;
 	j = 0;
 	index = -1;

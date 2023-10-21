@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeyazda  <ubeyazda@student.42.fr   >      +#+  +:+       +#+        */
+/*   By: ubeyazda <ubeyazda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:23:09 by ubeyazda          #+#    #+#             */
-/*   Updated: 2023/10/14 20:00:59 by ubeyazda         ###   ########.fr       */
+/*   Updated: 2023/10/21 12:10:11 by ubeyazda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	a = c;
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	while (s[i] != a && 0 < i)
 		i--;
 	if (s[i] == a)
